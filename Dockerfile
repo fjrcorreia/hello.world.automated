@@ -15,7 +15,7 @@ RUN 	yum install -y wget tar nano && yum clean all
 ## Get Java from the web
 RUN 	cd /tmp && wget --no-check-certificate --no-cookies \
         --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-        -O jdk-linux-x64.rpm "http://download.oracle.com/otn-pub/java/jdk/8u51-b16/jdk-8u51-linux-x64.rpm" && \
+        -O jdk-linux-x64.rpm "http://download.oracle.com/otn-pub/java/jdk/8u73-b02/jdk-8u73-linux-x64.rpm" && \
 		yum install -y jdk-linux-x64.rpm && rm jdk-linux-x64.rpm && yum clean all
 
 
@@ -25,4 +25,4 @@ ENV CLASSPATH  .:/usr/java/default/lib
 
 
 # launch a Console as default
-CMD ["/bin/bash", "-c", "/bin/bash"]
+CMD ["/bin/bash"]
